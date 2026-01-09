@@ -8,7 +8,7 @@ const Achievements = () => {
       <ul>
         <li>
           <strong>Build and Brand Challenge (2025):</strong> 
-          Best UI/UX for Fashion E-commerce Website.
+          Secured 3rd rank - Best UI/UX for Fashion E-commerce Website.
         </li>
         <li>
           <strong>Hack-NU-Thon 6.0 (2025):</strong> 

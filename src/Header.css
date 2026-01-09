@@ -1,0 +1,39 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  background: var(--section-bg);
+  border-bottom: 1px solid var(--border-color);
+  z-index: 1000;
+  margin-bottom: 40px;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: blueviolet;
+}
+
+.nav-links a {
+  margin: 0 1rem;
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: var(--btn-bg);
+}
+
+.theme-toggle {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: var(--btn-bg);
+  color: var(--btn-text);
+}

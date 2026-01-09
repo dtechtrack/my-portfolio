@@ -1,25 +1,32 @@
-import React from 'react';
-import './Home.css';
-import profile from '../assets/my.jpg'; // Replace with your uploaded photo
+import React from "react";
+import "./Home.css";
 
 const Home = () => {
   return (
     <section className="home">
-      <div className="intro-text">
-        <h1>Hello! I'm <span>Dhruvi Topiya</span></h1>
-        <h3>I'm a MERN Stack Developer</h3>
-        <p>
-          I build scalable applications, explore Cloud Computing and Web Development,
-          and have experience with real-time projects like Breast Cancer Prediction, Sentiment Analysis,
-          and IoT-based smart shopping trolleys.
+    <div className="stars stars-layer1"></div>
+    <div className="stars stars-layer2"></div>
+    <div className="stars stars-layer3"></div>
+
+      <div className="home-content">
+
+        <span className="intro-pill">Hello, I am</span>
+
+        <h1 className="home-title">
+          Dhruuvi <span>Topia</span>
+        </h1>
+
+        <h2 className="home-subtitle">
+          UI/UX Designer & Frontend Developer
+        </h2>
+
+        <p className="home-description">
+          A passionate Computer Engineering student focused on creating
+          intuitive, user-centered digital experiences. Skilled in UI/UX
+          design, frontend development, and modern web technologies, with
+          hands-on experience in building responsive and meaningful products.
         </p>
-        <div className="buttons">
-          <a href="#projects" className="btn filled">View My Work</a>
-          <a href="#contact" className="btn outlined">Contact Me →</a>
-        </div>
-      </div>
-      <div className="profile-pic">
-        <img src={profile} alt="Dhruvi Topiya" />
+
       </div>
     </section>
   );
