@@ -26,7 +26,6 @@ const Skills = () => {
           <h3>Tools</h3>
           <div className="badge-container">
             <img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white" alt="Figma" />
-            <img src="https://img.shields.io/badge/Framer-0055FF?style=for-the-badge&logo=framer&logoColor=white" alt="Framer" />
             <img src="https://img.shields.io/badge/Canva-00C4CC?style=for-the-badge&logo=canva&logoColor=white" alt="Canva" />
           </div>
         </div>

@@ -186,11 +186,11 @@
 }
 
 #achievements li:nth-child(1) strong::after {
-  content: '2025';
+  content: '';
 }
 
 #achievements li:nth-child(2) strong::after {
-  content: '2025';
+  content: '';
 }
 
 /* Responsive Design */
