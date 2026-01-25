@@ -11,6 +11,7 @@ import Contact from "./Components/Contact";
 import CaseStudy1 from "./Components/CaseStudy1";
 import CaseStudy2 from "./Components/CaseStudy2";
 import ScrollToTop from "./Components/ScrollToTop";
+import CaseStudyLayout from "./Components/CaseStudyLayout";
 
 import "./App.css";
 
@@ -24,30 +25,33 @@ function App() {
         <Header />
 
         <Routes>
-          {/* Main Portfolio Page */}
-          <Route
-            path="/"
-            element={
-              <main>
-                <Home />
-                <Skills />
-                <Projects />
-                <Achievements />
-                <Contact />
-              </main>
-            }
-          />
+  {/* Home / Portfolio */}
+  <Route
+    path="/"
+    element={
+      <>
+        <Home />
+        <Skills />
+        <Projects />
+        <Achievements />
+        <Contact />
+      </>
+    }
+  />
 
-          {/* Case Study Pages */}
-          <Route
-            path="/case-study/smart-rfid-trolley"
-            element={<CaseStudy1 />}
-          />
-          <Route
-            path="/case-study/shoes-app"
-            element={<CaseStudy2 />}
-          />
-        </Routes>
+  {/* Case Studies Layout */}
+  <Route element={<CaseStudyLayout />}>
+    <Route
+      path="/case-study/smart-rfid-trolley"
+      element={<CaseStudy1 />}
+    />
+    <Route
+      path="/case-study/shoes-app"
+      element={<CaseStudy2 />}
+    />
+  </Route>
+</Routes>
+
       </BrowserRouter>
     </ThemeProvider>
   );

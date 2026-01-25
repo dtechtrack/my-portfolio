@@ -2,25 +2,18 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./CaseStudy.css";
 
-// replace with your actual images later
-import shoesImg from "../assets/shoes.png";
-
 const ShoesCaseStudy = () => {
   return (
     <section className="case-wrapper">
 
-      {/* Back Button */}
       <Link to="/#projects" className="back-link">
         ← Back to Projects
       </Link>
 
-      {/* Header */}
       <header className="case-header">
         <div className="case-meta">
           <h1>Shoes Hub – E-Commerce Website</h1>
-          <p className="subtitle">
-            Online Shoe Shopping Platform
-          </p>
+          <p className="subtitle">Online Shoes Shopping Platform</p>
 
           <div className="meta-grid">
             <div>
@@ -38,23 +31,23 @@ const ShoesCaseStudy = () => {
           </div>
         </div>
 
- {/* Hero Image / Prototype */}
         <a
-          href="https://www.figma.com/proto/mz0AZryRb55ARujcYKgtda/Dhruvi-project?node-id=1-2196&p=f&t=lT8oiAx70I59kHYn-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1"
+          href="https://www.figma.com/proto/mz0AZryRb55ARujcYKgtda/Dhruvi-project"
           target="_blank"
           rel="noopener noreferrer"
           className="hero-image"
         >
-          <img src={shoesImg} alt="Shoes App Prototype" />
+          <img
+            src="/images/shoes.png"
+            alt="Shoes App Prototype"
+          />
           <span className="image-hint">
             Click to view interactive prototype →
           </span>
         </a>
       </header>
 
-      {/* Case Study Content */}
       <section className="case-content">
-
         {/* ABOUT PROJECT */}
         <div className="case-block">
           <h2>About Project</h2>
@@ -125,10 +118,8 @@ const ShoesCaseStudy = () => {
   </ul>
 </div>
 
-
-        
-
       </section>
+
     </section>
   );
 };

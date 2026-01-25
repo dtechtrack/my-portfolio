@@ -2,17 +2,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./CaseStudy.css";
 
-// Replace these with your actual images
-import heroImg from "../assets/hero.jpeg";
-
 const SmartRFIDCaseStudy = () => {
   return (
     <section className="case-wrapper">
 
       {/* Back Button */}
       <Link to="/#projects" className="back-link">
-  ← Back to Projects
-</Link>
+        ← Back to Projects
+      </Link>
 
       {/* Header Section */}
       <header className="case-header">
@@ -38,24 +35,26 @@ const SmartRFIDCaseStudy = () => {
           </div>
         </div>
 
-        {/* Hero Image / Prototype */}
+        {/* Hero Image */}
         <a
-          href="https://www.figma.com/proto/hrURknXWsn48s7CRg61BsR/Untitled?node-id=4-37&t=99MzsRcwAAPHz3iD-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=4%3A37"
+          href="https://www.figma.com/proto/hrURknXWsn48s7CRg61BsR/Untitled"
           target="_blank"
           rel="noopener noreferrer"
           className="hero-image"
         >
-          <img src={heroImg} alt="Smart RFID Shopping Trolley Prototype" />
+          <img
+            src="/images/hero.jpeg"
+            alt="Smart RFID Shopping Trolley Prototype"
+          />
           <span className="image-hint">
             Click to view interactive prototype →
           </span>
         </a>
       </header>
 
-{/* Case Study Content */}
-<section className="case-content">
-
-  {/* OBJECTIVE + PROBLEM (CONTINUOUS FLOW) */}
+      {/* Case Study Content */}
+      <section className="case-content">
+        {/* OBJECTIVE + PROBLEM (CONTINUOUS FLOW) */}
   <div className="case-block">
     <h2>Objective</h2>
     <p>
@@ -145,10 +144,7 @@ const SmartRFIDCaseStudy = () => {
     
   </div>
 
-  
-
-</section>
-
+      </section>
 
     </section>
   );

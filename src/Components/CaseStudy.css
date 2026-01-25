@@ -147,3 +147,15 @@
   flex-direction: column;
   gap: 6px;
 }
+
+
+.case-header {
+  position: relative;
+  overflow: visible; /* IMPORTANT */
+}
+
+.case-content {
+  position: relative;
+  margin-top: 80px; /* pushes content below hero */
+  z-index: 1;
+}

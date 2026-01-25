@@ -1,21 +1,15 @@
-import React from 'react';
+import React from "react";
 import { Link } from "react-router-dom";
-import './Projects.css';
-import adaaImg from '../assets/adaa.png';
-import smartTrolleyImg from '../assets/hero.jpeg';
-import shoesImg from '../assets/shoes.png';
-
-
-
-
+import "./Projects.css";
 
 const Projects = () => {
   return (
     <section id="projects">
       <h2>Projects</h2>
+
       <div className="projects-list">
 
-        {/* Project 1 */}
+        {/* Project 1 – Adaa Jaipur */}
         <a
           href="https://dhairyafrontend.netlify.app/"
           target="_blank"
@@ -24,7 +18,7 @@ const Projects = () => {
         >
           <div className="project-preview">
             <img
-              src={adaaImg}
+              src="/images/adaa.png"
               alt="Adaa Jaipur Project"
             />
           </div>
@@ -39,55 +33,49 @@ const Projects = () => {
           </div>
         </a>
 
-               {/* Project 2 – Smart RFID Trolley */}
-<Link
-  to="/case-study/smart-rfid-trolley"
-  className="project-envelope"
->
-  <div className="project-preview">
-    <img
-      src={smartTrolleyImg}
-      alt="Smart RFID Shopping Trolley"
-    />
-  </div>
+        {/* Project 2 – Smart RFID Trolley */}
+        <Link
+          to="/case-study/smart-rfid-trolley"
+          className="project-envelope"
+        >
+          <div className="project-preview">
+            <img
+              src="/images/hero.jpeg"
+              alt="Smart RFID Shopping Trolley"
+            />
+          </div>
 
-  <div className="project-right">
-    <h3>Smart RFID Shopping Trolley</h3>
-    <p>
-      A real-time IoT-based shopping system designed to eliminate checkout
-      queues using RFID, embedded UI, and backend synchronization.
-    </p>
-    <span className="project-cta">View Case Study →</span>
-  </div>
-</Link>
+          <div className="project-right">
+            <h3>Smart RFID Shopping Trolley</h3>
+            <p>
+              A real-time IoT-based shopping system designed to eliminate
+              checkout queues using RFID and embedded UI.
+            </p>
+            <span className="project-cta">View Case Study →</span>
+          </div>
+        </Link>
 
+        {/* Project 3 – Shoes Hub */}
+        <Link
+          to="/case-study/shoes-app"
+          className="project-envelope"
+        >
+          <div className="project-preview">
+            <img
+              src="/images/shoes.png"
+              alt="Shoes Hub Application"
+            />
+          </div>
 
-
-          {/* Project 3 – Shoes Application */}
-<Link
-  to="/case-study/shoes-app"
-  className="project-envelope"
->
-  <div className="project-preview">
-    <img
-      src={shoesImg}
-      alt="Smart RFID Shopping Trolley"
-    />
-  </div>
-
-  <div className="project-right">
-    <h3>Smart RFID Shopping Trolley</h3>
-    <p>
-      A real-time IoT-based shopping system designed to eliminate checkout
-      queues using RFID, embedded UI, and backend synchronization.
-    </p>
-    <span className="project-cta">View Case Study →</span>
-  </div>
-</Link>
-
-
-
-
+          <div className="project-right">
+            <h3>Shoes Hub</h3>
+            <p>
+              An e-commerce website focused on clean navigation, product
+              discovery, and a smooth checkout experience.
+            </p>
+            <span className="project-cta">View Case Study →</span>
+          </div>
+        </Link>
 
       </div>
     </section>
