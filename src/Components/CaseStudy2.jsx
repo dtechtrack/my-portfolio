@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./CaseStudy.css";
 
 // replace with your actual images later
-import heroImg from "../assets/shoes.png";
+import shoesImg from "../assets/shoes.png";
 
 const ShoesCaseStudy = () => {
   return (
@@ -45,7 +45,7 @@ const ShoesCaseStudy = () => {
           rel="noopener noreferrer"
           className="hero-image"
         >
-          <img src={heroImg} alt="Shoes App Prototype" />
+          <img src={shoesImg} alt="Shoes App Prototype" />
           <span className="image-hint">
             Click to view interactive prototype →
           </span>
