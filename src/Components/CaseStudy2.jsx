@@ -38,10 +38,18 @@ const ShoesCaseStudy = () => {
           </div>
         </div>
 
-        {/* Hero Image */}
-        <div className="hero-image">
-          <img src={heroImg} alt="Shoes Website Preview" />
-        </div>
+ {/* Hero Image / Prototype */}
+        <a
+          href="https://www.figma.com/proto/mz0AZryRb55ARujcYKgtda/Dhruvi-project?node-id=1-2196&p=f&t=lT8oiAx70I59kHYn-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hero-image"
+        >
+          <img src={heroImg} alt="Shoes App Prototype" />
+          <span className="image-hint">
+            Click to view interactive prototype →
+          </span>
+        </a>
       </header>
 
       {/* Case Study Content */}
