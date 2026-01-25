@@ -1,11 +1,7 @@
 import React from 'react';
 import './Projects.css';
 import adaaImg from '../assets/adaa.png';
-import vaultImg from '../assets/vault.png';
-import muImg from '../assets/mu.png';
-import fashionImg from '../assets/fashion.png';
-import iphoneImg from '../assets/iphone.png';
-import twitterImg from '../assets/twitter.png';
+
 
 
 
