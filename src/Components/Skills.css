@@ -1,47 +1,41 @@
-/* Modern Skills Section - White Theme */
+/* Modern Skills Section - Professional Layout */
 
 #skills {
-  background: #ffffff;
-  border-radius: 0;
-  margin: 0 auto;
-  padding: 100px 32px;
+  background: var(--bg-primary);
+  padding: var(--space-4xl) var(--space-xl);
   position: relative;
 }
 
-#skills h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(2.5rem, 5vw, 3.5rem);
-  font-weight: 800;
+#skills > h2 {
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 5vw, 3.75rem);
+  font-weight: 700;
   text-align: center;
-  margin-bottom: 4rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #8b5cf6 100%);
+  margin-bottom: var(--space-4xl);
+  background: var(--gradient-primary);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   background-size: 200% 200%;
   animation: gradient-shift 8s ease infinite;
   position: relative;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03em;
 }
 
 @keyframes gradient-shift {
-  0%, 100% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
 }
 
-#skills h2::after {
+#skills > h2::after {
   content: '';
   position: absolute;
-  bottom: -16px;
+  bottom: -var(--space-md);
   left: 50%;
   transform: translateX(-50%);
-  width: 100px;
+  width: 80px;
   height: 4px;
-  background: linear-gradient(135deg, #8b5cf6, #a855f7);
+  background: var(--gradient-primary);
   border-radius: 2px;
 }
 
@@ -49,7 +43,7 @@
 .skills-container {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2rem;
+  gap: var(--space-2xl);
   position: relative;
   max-width: 1000px;
   margin: 0 auto;
@@ -57,14 +51,14 @@
 
 /* Skill Card */
 .skill-card {
-  background: #ffffff;
-  border: 1px solid #e5e7eb;
-  border-radius: 20px;
-  padding: 2.5rem;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-light);
+  border-radius: 22px;
+  padding: var(--space-3xl);
   position: relative;
   overflow: hidden;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+  box-shadow: var(--shadow-sm);
 }
 
 .skill-card::before {
@@ -74,15 +68,16 @@
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(135deg, #8b5cf6, #a855f7);
+  background: var(--gradient-primary);
   transform: scaleX(0);
-  transition: transform 0.4s ease;
+  transform-origin: left;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .skill-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(139, 92, 246, 0.12), 0 0 0 1px rgba(139, 92, 246, 0.1);
-  border-color: rgba(139, 92, 246, 0.3);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(99, 102, 241, 0.25);
 }
 
 .skill-card:hover::before {
@@ -90,12 +85,24 @@
 }
 
 .skill-card h3 {
-  font-family: 'Playfair Display', serif;
-  margin-bottom: 1.5rem;
-  font-size: 1.75rem;
+  font-family: var(--font-heading);
+  margin-bottom: var(--space-xl);
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
   font-weight: 700;
-  color: #1a1a1a;
+  color: var(--text-primary);
   letter-spacing: -0.01em;
+  position: relative;
+}
+
+.skill-card h3::after {
+  content: '';
+  position: absolute;
+  bottom: -var(--space-sm);
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: var(--gradient-primary);
+  border-radius: 2px;
 }
 
 .skill-card ul {
@@ -104,64 +111,118 @@
   margin: 0;
 }
 
-/* Skill Badges */
+/* Badge Container */
+.badge-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  margin-top: var(--space-md);
+}
+
+.badge-container img {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 8px;
+  opacity: 0.9;
+}
+
+.badge-container img:hover {
+  transform: translateY(-4px) scale(1.05);
+  opacity: 1;
+  box-shadow: var(--shadow-md);
+}
+
+/* Skill Badges (if using custom badges) */
 .skill-badges {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.75rem;
-  margin-top: 1rem;
+  gap: var(--space-md);
+  margin-top: var(--space-md);
 }
 
 .badge {
-  padding: 0.75rem 1.25rem;
+  padding: var(--space-sm) var(--space-lg);
   border-radius: 12px;
   font-size: 0.9rem;
   font-weight: 500;
-  background: linear-gradient(135deg, rgba(139, 92, 246, 0.08), rgba(102, 126, 234, 0.08));
-  border: 1px solid rgba(139, 92, 246, 0.15);
-  color: #1a1a1a;
-  font-family: 'Inter', sans-serif;
-  transition: all 0.3s ease;
+  background: linear-gradient(135deg, 
+    rgba(99, 102, 241, 0.08) 0%, 
+    rgba(139, 92, 246, 0.08) 100%);
+  border: 1px solid rgba(99, 102, 241, 0.15);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+
+.badge::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: var(--gradient-primary);
+  transition: left 0.3s ease;
+  z-index: -1;
 }
 
 .badge:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.15);
-  background: linear-gradient(135deg, rgba(139, 92, 246, 0.12), rgba(102, 126, 234, 0.12));
-  border-color: rgba(139, 92, 246, 0.25);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: transparent;
+  color: white;
+}
+
+.badge:hover::before {
+  left: 0;
+}
+
+/* Full Width Cards */
+.skill-card.full-width {
+  width: 100%;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
   #skills {
-    padding: 60px 24px;
+    padding: var(--space-3xl) var(--space-lg);
   }
 
-  #skills h2 {
-    margin-bottom: 3rem;
+  #skills > h2 {
+    margin-bottom: var(--space-3xl);
   }
 
   .skill-card {
-    padding: 2rem;
+    padding: var(--space-2xl);
   }
 
   .skill-card h3 {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
+  }
+
+  .badge-container {
+    gap: var(--space-sm);
+  }
+
+  .badge-container img {
+    max-width: 100%;
+    height: auto;
   }
 }
 
 @media (max-width: 480px) {
   #skills {
-    padding: 40px 16px;
+    padding: var(--space-2xl) var(--space-md);
   }
 
   .skill-card {
-    padding: 1.5rem;
+    padding: var(--space-xl);
   }
 
   .badge {
     font-size: 0.85rem;
-    padding: 0.625rem 1rem;
+    padding: var(--space-xs) var(--space-md);
   }
 }

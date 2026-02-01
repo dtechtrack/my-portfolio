@@ -1,6 +1,6 @@
 // src/App.js
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { ThemeProvider } from "./ThemeContext";
 import Header from "./Header";
 import Home from "./Components/Home";
@@ -15,6 +15,18 @@ import CaseStudyLayout from "./Components/CaseStudyLayout";
 
 import "./App.css";
 
+// Component to conditionally show header
+function ConditionalHeader() {
+  const location = useLocation();
+  const isCaseStudy = location.pathname.includes('/case-study/');
+  
+  if (isCaseStudy) {
+    return null; // Hide header on case study pages
+  }
+  
+  return <Header />;
+}
+
 function App() {
   return (
     <ThemeProvider>
@@ -22,7 +34,7 @@ function App() {
         {/* Scroll reset on route change */}
         <ScrollToTop />
 
-        <Header />
+        <ConditionalHeader />
 
         <Routes>
   {/* Home / Portfolio */}

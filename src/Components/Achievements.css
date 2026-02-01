@@ -1,47 +1,41 @@
-/* Modern Achievements Section - White Theme */
+/* Modern Achievements Section - Editorial Style */
 
 #achievements {
-  background: #ffffff;
-  border-radius: 0;
-  margin: 0 auto;
-  padding: 100px 32px;
+  background: var(--bg-primary);
+  padding: var(--space-4xl) var(--space-xl);
   position: relative;
 }
 
-#achievements h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(2.5rem, 5vw, 3.5rem);
-  font-weight: 800;
+#achievements > h2 {
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 5vw, 3.75rem);
+  font-weight: 700;
   text-align: center;
-  margin-bottom: 4rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #8b5cf6 100%);
+  margin-bottom: var(--space-4xl);
+  background: var(--gradient-primary);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   background-size: 200% 200%;
   animation: gradient-shift 8s ease infinite;
   position: relative;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03em;
 }
 
 @keyframes gradient-shift {
-  0%, 100% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
 }
 
-#achievements h2::after {
+#achievements > h2::after {
   content: '';
   position: absolute;
-  bottom: -16px;
+  bottom: -var(--space-md);
   left: 50%;
   transform: translateX(-50%);
-  width: 100px;
+  width: 80px;
   height: 4px;
-  background: linear-gradient(135deg, #8b5cf6, #a855f7);
+  background: var(--gradient-primary);
   border-radius: 2px;
 }
 
@@ -50,7 +44,7 @@
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: var(--space-2xl);
   position: relative;
   max-width: 1000px;
   margin: 0 auto;
@@ -59,14 +53,14 @@
 
 /* Achievement Item */
 #achievements li {
-  background: #ffffff;
-  border: 1px solid #e5e7eb;
-  border-radius: 20px;
-  padding: 2.5rem;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-light);
+  border-radius: 22px;
+  padding: var(--space-3xl);
   position: relative;
   overflow: hidden;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+  box-shadow: var(--shadow-sm);
 }
 
 #achievements li::before {
@@ -76,15 +70,16 @@
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(135deg, #8b5cf6, #a855f7);
+  background: var(--gradient-primary);
   transform: scaleX(0);
-  transition: transform 0.4s ease;
+  transform-origin: left;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 #achievements li:hover {
   transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(139, 92, 246, 0.12), 0 0 0 1px rgba(139, 92, 246, 0.1);
-  border-color: rgba(139, 92, 246, 0.3);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(99, 102, 241, 0.25);
 }
 
 #achievements li:hover::before {
@@ -93,74 +88,94 @@
 
 /* Achievement Title */
 #achievements li strong {
-  font-family: 'Playfair Display', serif;
-  color: #1a1a1a;
-  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-family: var(--font-heading);
+  color: var(--text-primary);
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
   font-weight: 700;
   display: block;
-  margin-bottom: 1rem;
+  margin-bottom: var(--space-lg);
   position: relative;
   letter-spacing: -0.01em;
+  line-height: 1.3;
 }
 
 #achievements li strong::before {
   content: '🏆';
-  margin-right: 0.75rem;
-  font-size: 1.5rem;
+  margin-right: var(--space-md);
+  font-size: 1.75rem;
   filter: grayscale(0);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   display: inline-block;
+  vertical-align: middle;
 }
 
 #achievements li:hover strong::before {
-  transform: scale(1.15) rotate(10deg);
+  transform: scale(1.2) rotate(15deg);
 }
 
 /* Achievement Description */
 #achievements li p,
 #achievements li:not(:has(strong)) {
-  font-family: 'Inter', sans-serif;
-  color: #4b5563;
-  font-size: 1.125rem;
+  font-family: var(--font-body);
+  color: var(--text-secondary);
+  font-size: clamp(1rem, 1.2vw, 1.125rem);
   line-height: 1.8;
   position: relative;
   margin: 0;
 }
 
+/* Decorative Element */
+#achievements li::after {
+  content: '';
+  position: absolute;
+  top: var(--space-xl);
+  right: var(--space-xl);
+  width: 60px;
+  height: 60px;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+#achievements li:hover::after {
+  opacity: 1;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   #achievements {
-    padding: 60px 24px;
+    padding: var(--space-3xl) var(--space-lg);
   }
 
-  #achievements h2 {
-    margin-bottom: 3rem;
+  #achievements > h2 {
+    margin-bottom: var(--space-3xl);
   }
 
   #achievements ul {
-    gap: 1.5rem;
+    gap: var(--space-xl);
   }
 
   #achievements li {
-    padding: 2rem;
+    padding: var(--space-2xl);
   }
 
   #achievements li strong {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
   }
 }
 
 @media (max-width: 480px) {
   #achievements {
-    padding: 40px 16px;
+    padding: var(--space-2xl) var(--space-md);
   }
 
   #achievements li {
-    padding: 1.5rem;
+    padding: var(--space-xl);
   }
 
   #achievements li strong {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
   }
 
   #achievements li p {

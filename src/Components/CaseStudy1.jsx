@@ -7,8 +7,21 @@ const SmartRFIDCaseStudy = () => {
     <section className="case-wrapper">
 
       {/* Back Button */}
-      <Link to="/#projects" className="back-link">
-        ← Back to Projects
+      <Link 
+        to="/" 
+        className="back-link"
+        onClick={(e) => {
+          e.preventDefault();
+          window.location.href = '/#projects';
+          setTimeout(() => {
+            const projectsSection = document.getElementById('projects');
+            if (projectsSection) {
+              projectsSection.scrollIntoView({ behavior: 'smooth' });
+            }
+          }, 100);
+        }}
+      >
+        ← Back to Home
       </Link>
 
       {/* Header Section */}
