@@ -1,4 +1,4 @@
-/* Home.css - Updated Home Component Styles */
+/* Modern Home Section - White Theme with Gradients */
 
 .home {
   min-height: 100vh;
@@ -6,99 +6,122 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 80px 5%;
+  padding: 120px 5% 80px;
   position: relative;
   overflow: hidden;
-  background: var(--section-bg);
-  color: var(--text-color);
+  background: #ffffff;
+  background-image: 
+    radial-gradient(circle at 20% 30%, rgba(139, 92, 246, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(102, 126, 234, 0.03) 0%, transparent 50%);
 }
 
-/* Background glow blobs (kept from your original design) */
-.home::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(circle at 20% 30%, rgba(139, 92, 246, 0.12) 0%, transparent 45%),
-    radial-gradient(circle at 80% 20%, rgba(168, 85, 247, 0.12) 0%, transparent 45%),
-    radial-gradient(circle at 50% 80%, rgba(124, 58, 237, 0.12) 0%, transparent 45%);
-  pointer-events: none;
+/* Remove star animations for cleaner look */
+.stars,
+.stars-layer1,
+.stars-layer2,
+.stars-layer3 {
+  display: none;
 }
 
-/* Main content wrapper */
 .home-content {
   max-width: 900px;
   text-align: center;
   z-index: 2;
-  animation: fadeInUp 0.9s ease-out;
+  animation: fadeInUp 1s ease-out;
 }
 
-/* Intro pill */
 .intro-pill {
   display: inline-block;
-  padding: 8px 18px;
-  margin-bottom: 1.6rem;
-  border-radius: 999px;
+  padding: 12px 24px;
+  margin-bottom: 2rem;
+  border-radius: 50px;
   font-size: 0.95rem;
   font-weight: 600;
-  color: var(--text-color);
-  background: linear-gradient(
-    135deg,
-    rgba(139, 92, 246, 0.22),
-    rgba(168, 85, 247, 0.22)
-  );
-  border: 1px solid rgba(139, 92, 246, 0.35);
+  color: #8b5cf6;
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(102, 126, 234, 0.1));
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  backdrop-filter: blur(10px);
   animation: fadeInUp 0.8s ease-out;
+  font-family: 'Inter', sans-serif;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-size: 0.875rem;
 }
 
-/* Name heading */
 .home-title {
-  font-size: clamp(2.8rem, 6vw, 4rem);
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(3rem, 8vw, 5.5rem);
   font-weight: 800;
-  margin-bottom: 0.8rem;
-  line-height: 1.15;
-  background: linear-gradient(135deg, #d3c4f1, #a855f7, #c084fc);
+  margin-bottom: 1rem;
+  line-height: 1.1;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #8b5cf6 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  background-size: 200% 200%;
+  animation: gradient-shift 8s ease infinite, fadeInUp 0.9s ease-out 0.2s both;
+  letter-spacing: -0.03em;
 }
 
 .home-title span {
-  background: linear-gradient(135deg, #8b5cf6, #a855f7, #c084fc);
+  display: inline-block;
+  background: linear-gradient(135deg, #8b5cf6 0%, #a855f7 50%, #c084fc 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  animation: gradient 4s ease infinite;
   background-size: 200% 200%;
+  animation: gradient-shift 6s ease infinite;
 }
 
-/* Subtitle */
+@keyframes gradient-shift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
 .home-subtitle {
-  font-size: 1.45rem;
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
   font-weight: 500;
-  margin-bottom: 1.6rem;
-  color: #9983dc;
-  animation: fadeInUp 0.8s ease-out 0.15s both;
+  margin-bottom: 2rem;
+  color: #4b5563;
+  animation: fadeInUp 0.8s ease-out 0.4s both;
+  letter-spacing: -0.01em;
 }
 
-/* Description */
 .home-description {
-  font-size: 1.05rem;
-  line-height: 1.75;
-  max-width: 720px;
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  line-height: 1.8;
+  max-width: 700px;
   margin: 0 auto;
-  color: #b0a6d4;
-  animation: fadeInUp 0.8s ease-out 0.3s both;
+  color: #6b7280;
+  animation: fadeInUp 0.8s ease-out 0.6s both;
+  font-weight: 400;
 }
 
-/* Responsive adjustments */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
 @media (max-width: 768px) {
   .home {
-    padding: 60px 20px;
+    padding: 100px 20px 60px;
   }
 
   .home-title {
-    font-size: 2.5rem;
+    font-size: 2.75rem;
   }
 
   .home-subtitle {
@@ -106,112 +129,29 @@
   }
 
   .home-description {
-    font-size: 1rem;
+    font-size: 1.1rem;
+  }
+
+  .intro-pill {
+    font-size: 0.8rem;
+    padding: 10px 20px;
   }
 }
 
 @media (max-width: 480px) {
+  .home {
+    padding: 80px 16px 40px;
+  }
+
   .home-title {
-    font-size: 2.1rem;
+    font-size: 2.25rem;
   }
 
   .home-subtitle {
     font-size: 1.1rem;
   }
 
-  .intro-pill {
-    font-size: 0.85rem;
-    padding: 6px 14px;
+  .home-description {
+    font-size: 1rem;
   }
-}
-
-
-/* 🌌 REALISTIC COSMIC STARFIELD */
-
-/* Base star layer */
-.stars {
-  position: absolute;
-  inset: -300%;
-  background-repeat: repeat;
-  pointer-events: none;
-  z-index: 1;
-  animation-timing-function: linear;
-}
-
-/* ⭐ Tiny distant stars (most of them) */
-.stars-layer1 {
-  background-image:
-    radial-gradient(2.6px 2.6px at 10% 20%, #ffffff, transparent),
-    radial-gradient(2.7px 2.7px at 30% 80%, #e9d5ff, transparent),
-    radial-gradient(3.5px 3.5px at 50% 40%, #ffffff, transparent),
-    radial-gradient(2.6px 2.6px at 70% 60%, #ddd6fe, transparent),
-    radial-gradient(3.5px 3.5px at 90% 30%, #ffffff, transparent),
-    radial-gradient(0.6px 0.6px at 20% 70%, #f5d0fe, transparent);
-  background-size: 250px 250px;
-  opacity: 0.45;
-  animation:
-    driftSlow 160s linear infinite,
-    twinkleSoft 7s ease-in-out infinite;
-}
-
-/* ✨ Medium stars */
-.stars-layer2 {
-  background-image:
-    radial-gradient(5px 5px at 15% 25%, #ffffff, transparent),
-    radial-gradient(4.2px 4.2px at 45% 65%, #e9d5ff, transparent),
-    radial-gradient(5px 5px at 65% 35%, #ffffff, transparent),
-    radial-gradient(4.1px 4.1px at 85% 75%, #ddd6fe, transparent);
-  background-size: 350px 350px;
-  opacity: 0.65;
-  animation:
-    driftMedium 110s linear infinite,
-    twinkle 5s ease-in-out infinite;
-}
-
-/* 🌟 Big bright foreground stars (few only) */
-.stars-layer3 {
-  background-image:
-    radial-gradient(6px 6px at 25% 50%, #ffffff, transparent),
-    radial-gradient(7.5px 7.5px at 55% 10%, #f5d0fe, transparent),
-    radial-gradient(6px 6px at 75% 70%, #ffffff, transparent);
-  background-size: 600px 600px;
-  opacity: 0.85;
-  animation:
-    driftFast 80s linear infinite,
-    twinkleStrong 4s ease-in-out infinite;
-}
-
-/* 🌌 Natural drifting motion */
-@keyframes driftSlow {
-  from { transform: translate(0, 0); }
-  to   { transform: translate(-400px, -800px); }
-}
-
-@keyframes driftMedium {
-  from { transform: translate(0, 0); }
-  to   { transform: translate(500px, -500px); }
-}
-
-@keyframes driftFast {
-  from { transform: translate(0, 0); }
-  to   { transform: translate(-600px, 400px); }
-}
-
-/* ✨ Twinkle variations */
-@keyframes twinkleSoft {
-  0%   { opacity: 0.35; }
-  50%  { opacity: 0.55; }
-  100% { opacity: 0.4; }
-}
-
-@keyframes twinkle {
-  0%   { opacity: 0.5; }
-  50%  { opacity: 0.85; }
-  100% { opacity: 0.55; }
-}
-
-@keyframes twinkleStrong {
-  0%   { opacity: 0.6; }
-  50%  { opacity: 1; }
-  100% { opacity: 0.65; }
 }

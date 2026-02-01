@@ -1,191 +1,179 @@
-/* Projects.css - Projects Component Styles */
-#projects {
-  background: linear-gradient(135deg, #0f0f23 0%, #1a0a2e 50%, #0a0a0a 100%);
-  border-radius: 20px;
-  margin: 40px auto;
-  padding: 60px 40px;
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-  background: var(--section-bg); /* ✅ theme */
-  color: var(--text-color);
-}
+/* Modern Projects Section - White Theme */
 
-#projects::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: 
-    radial-gradient(circle at 30% 20%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 70% 80%, rgba(168, 85, 247, 0.1) 0%, transparent 50%);
-  pointer-events: none;
+#projects {
+  background: #ffffff;
+  border-radius: 0;
+  margin: 0 auto;
+  padding: 100px 32px;
+  position: relative;
+  overflow: visible;
 }
 
 #projects h2 {
-  font-size: 2.8rem;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
   font-weight: 800;
   text-align: center;
-  margin-bottom: 3rem;
-  background: linear-gradient(135deg, #ffffff, #b28dd9, #5f3977);
+  margin-bottom: 4rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #8b5cf6 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  background-size: 200% 200%;
+  animation: gradient-shift 8s ease infinite;
   position: relative;
-  z-index: 2;
-  color: var(--text-color); /* ✅ theme */
+  letter-spacing: -0.02em;
+}
+
+@keyframes gradient-shift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
 }
 
 #projects h2::after {
   content: '';
   position: absolute;
-  bottom: -10px;
+  bottom: -16px;
   left: 50%;
   transform: translateX(-50%);
-  width: 80px;
+  width: 100px;
   height: 4px;
   background: linear-gradient(135deg, #8b5cf6, #a855f7);
   border-radius: 2px;
 }
 
-
-/* ===============================
-   📩 Envelope Style Project Cards
-================================ */
-
+/* Projects List */
 .projects-list {
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
+  gap: 3rem;
   position: relative;
-  z-index: 2;
 }
 
-/* Whole card is clickable */
+/* Project Envelope Card */
 .project-envelope {
   display: grid;
   grid-template-columns: 45% 55%;
   text-decoration: none;
   color: inherit;
-  border-radius: 20px;
+  border-radius: 24px;
   overflow: hidden;
-  background: linear-gradient(
-    135deg,
-    rgba(139, 92, 246, 0.12),
-    rgba(168, 85, 247, 0.08)
-  );
-  border: 1px solid rgba(139, 92, 246, 0.3);
-  backdrop-filter: blur(14px);
-  transition: all 0.5s ease;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(0, 0, 0, 0.02);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
+  align-items: stretch;
 }
 
-/* Glow sweep */
 .project-envelope::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    120deg,
-    transparent,
-    rgba(139, 92, 246, 0.25),
-    transparent
-  );
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.05), rgba(102, 126, 234, 0.05));
   opacity: 0;
-  transition: opacity 0.5s ease;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.project-envelope:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(139, 92, 246, 0.15), 0 0 0 1px rgba(139, 92, 246, 0.1);
+  border-color: rgba(139, 92, 246, 0.3);
 }
 
 .project-envelope:hover::before {
   opacity: 1;
 }
 
-/* Hover lift */
-.project-envelope:hover {
-  transform: translateY(-12px) scale(1.01);
-  box-shadow: 0 30px 60px rgba(139, 92, 246, 0.35);
-  border-color: rgba(139, 92, 246, 0.6);
-}
-
-/* ===============================
-   LEFT: UI / Preview Area
-================================ */
-
-.project-left {
+/* Project Preview */
+.project-preview {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: radial-gradient(
-    circle at top left,
-    rgba(139, 92, 246, 0.25),
-    rgba(0, 0, 0, 0.6)
-  );
-  padding: 2rem;
+  height: 100%;
+  min-height: 300px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #f9fafb, #f3f4f6);
   position: relative;
 }
 
-/* Placeholder (can replace with image later) */
-.project-placeholder {
-  font-size: 1.6rem;
-  font-weight: 800;
-  text-align: center;
-  background: linear-gradient(135deg, #d8b4fe, #a855f7);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+.project-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
 }
 
-/* ===============================
-   RIGHT: Description Area
-================================ */
+.project-envelope:hover .project-preview img {
+  transform: scale(1.05);
+}
 
+/* Project Right Content */
 .project-right {
-  padding: 2.5rem;
+  padding: 3rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background: #ffffff;
 }
 
 .project-right h3 {
-  font-size: 1.6rem;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.5rem, 3vw, 2rem);
   font-weight: 700;
-  color: #c084fc;
+  color: #1a1a1a;
   margin-bottom: 1rem;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
 }
 
 .project-right p {
-  font-size: 1rem;
-  line-height: 1.7;
-  color: #a5b4fc;
-  margin-bottom: 1.8rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: #4b5563;
+  margin-bottom: 2rem;
 }
 
-/* CTA text */
+/* CTA */
 .project-cta {
-  font-size: 0.9rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
   font-weight: 600;
   color: #8b5cf6;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.3px;
   align-self: flex-start;
-  transition: transform 0.3s ease;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  background: rgba(139, 92, 246, 0.05);
+  border: 1px solid rgba(139, 92, 246, 0.1);
 }
 
 .project-envelope:hover .project-cta {
-  transform: translateX(6px);
+  transform: translateX(8px);
+  background: rgba(139, 92, 246, 0.1);
+  border-color: rgba(139, 92, 246, 0.2);
 }
 
-/* ===============================
-   Responsive
-================================ */
-
+/* Responsive */
 @media (max-width: 900px) {
   .project-envelope {
     grid-template-columns: 1fr;
   }
 
-  .project-left {
-    padding: 2.5rem;
+  .project-preview {
+    min-height: 250px;
+    border-radius: 24px 24px 0 0;
   }
 
   .project-right {
@@ -193,44 +181,34 @@
   }
 }
 
+@media (max-width: 768px) {
+  #projects {
+    padding: 60px 24px;
+  }
+
+  #projects h2 {
+    margin-bottom: 3rem;
+  }
+
+  .projects-list {
+    gap: 2.5rem;
+  }
+}
+
 @media (max-width: 480px) {
+  #projects {
+    padding: 40px 16px;
+  }
+
+  .project-right {
+    padding: 1.5rem;
+  }
+
   .project-right h3 {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
   }
 
   .project-right p {
-    font-size: 0.95rem;
+    font-size: 1rem;
   }
-}
-
-
-.project-preview img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.project-preview {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;              /* 🔑 important */
-  min-height: 280px;         /* fallback */
-  overflow: hidden;
-  background: radial-gradient(
-    circle at top left,
-    rgba(139, 92, 246, 0.25),
-    rgba(0, 0, 0, 0.6)
-  );
-  border-radius: 20px 0 0 20px;
-}
-
-.project-left, .project-preview {
-  border-radius: 20px 0 0 20px;
-  overflow: hidden;
-}
-
-.project-envelope {
-  align-items: stretch; /* 🔑 REQUIRED */
 }

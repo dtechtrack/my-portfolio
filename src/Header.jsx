@@ -1,11 +1,8 @@
 // src/Header.jsx
-import React, { useContext } from "react";
-import { ThemeContext } from "./ThemeContext";
+import React from "react";
 import "./Header.css";
 
 const Header = () => {
-  const { theme, toggleTheme } = useContext(ThemeContext);
-
   return (
     <header className="header">
       <div className="logo">Dhruvi</div>
@@ -15,9 +12,6 @@ const Header = () => {
         <a href="#achievements">Achievements</a>
         <a href="#contact">Contact</a>
       </nav>
-      <button onClick={toggleTheme} className="theme-toggle">
-        {theme === "light" ? "🌙 Dark Mode" : "☀️ Light Mode"}
-      </button>
     </header>
   );
 };

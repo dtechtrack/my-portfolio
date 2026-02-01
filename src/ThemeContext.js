@@ -1,32 +1,16 @@
 // src/ThemeContext.js
-import React, { createContext, useState, useEffect } from "react";
+import React, { createContext, useEffect } from "react";
 
 export const ThemeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
-  const [theme, setTheme] = useState("light");
-
-  // Load saved theme
+  // Always use light theme
   useEffect(() => {
-    const savedTheme = localStorage.getItem("theme");
-    if (savedTheme) {
-      setTheme(savedTheme);
-      document.documentElement.setAttribute("data-theme", savedTheme);
-    }
+    document.documentElement.setAttribute("data-theme", "light");
   }, []);
 
-  // Apply theme changes
-  useEffect(() => {
-    document.documentElement.setAttribute("data-theme", theme);
-    localStorage.setItem("theme", theme);
-  }, [theme]);
-
-  const toggleTheme = () => {
-    setTheme(theme === "light" ? "dark" : "light");
-  };
-
   return (
-    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+    <ThemeContext.Provider value={{ theme: "light" }}>
       {children}
     </ThemeContext.Provider>
   );
