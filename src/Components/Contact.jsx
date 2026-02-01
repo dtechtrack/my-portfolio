@@ -10,7 +10,12 @@ const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('service_kon5lig', 'template_l54puhr', form.current, '2dBRYMzyXb91ElJvO')
+    emailjs.sendForm(
+      process.env.REACT_APP_EMAILJS_SERVICE_ID || 'service_kon5lig',
+      process.env.REACT_APP_EMAILJS_TEMPLATE_ID || 'template_l54puhr',
+      form.current,
+      process.env.REACT_APP_EMAILJS_PUBLIC_KEY || '2dBRYMzyXb91ElJvO'
+    )
       .then(() => {
         setMessage('Message sent successfully!');
         setMessageType('success');
@@ -43,11 +48,11 @@ const Contact = () => {
       
       {/* Optional: Add contact info section */}
       <div className="contact-info">
-        <a href="mailto:your.email@example.com" target="_blank" rel="noopener noreferrer" className="contact-item">
+        <a href="mailto:topiya.dhruvi@gmail.com" target="_blank" rel="noopener noreferrer" className="contact-item">
           <span className="icon">📧</span>
           <span>Email</span>
         </a>
-        <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" className="contact-item">
+        <a href="https://www.linkedin.com/in/dhruvi-topiya/" target="_blank" rel="noopener noreferrer" className="contact-item">
           <span className="icon">💼</span>
           <span>LinkedIn</span>
         </a>

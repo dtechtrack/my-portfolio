@@ -13,7 +13,7 @@ const Home = () => {
         <span className="intro-pill">Hello, I am</span>
 
         <h1 className="home-title">
-          Dhruuvi <span>Topia</span>
+          Dhruvi <span>Topiya</span>
         </h1>
 
         <h2 className="home-subtitle">
