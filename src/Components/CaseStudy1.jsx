@@ -108,7 +108,7 @@ const SmartRFIDCaseStudy = () => {
     </p>
     <p>
       Based on these insights, I designed a state-based embedded UI for
-      customers and a data-driven admin dashboard for store operations.
+      customers store operations.
     </p>
     <ul>
       <li>User journey mapping</li>
