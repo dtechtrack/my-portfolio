@@ -20,7 +20,7 @@ const ShoesCaseStudy = () => {
           }, 100);
         }}
       >
-        ← Back to Projects
+        ← Back to Home
       </Link>
 
       <header className="case-header">

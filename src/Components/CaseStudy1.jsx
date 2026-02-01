@@ -89,7 +89,6 @@ const SmartRFIDCaseStudy = () => {
       <li>Long queues and waiting time</li>
       <li>Manual barcode scanning</li>
       <li>Dependency on staff availability</li>
-      <li>Mobile app complexity for elderly users</li>
       <li>Billing errors and lack of transparency</li>
     </ul>
     <p className="highlight">
@@ -114,7 +113,6 @@ const SmartRFIDCaseStudy = () => {
     <ul>
       <li>User journey mapping</li>
       <li>Information architecture design</li>
-      <li>Embedded LCD UI wireframing</li>
       <li>Interaction validation using simulated IoT events</li>
     </ul>
   </div>
