@@ -62,17 +62,14 @@ const ShoesCaseStudy = () => {
 
       <section className="case-content">
         {/* ABOUT PROJECT */}
-        <div className="case-block">
-          <h2>About Project</h2>
-          <p>
-            Shoes Hub is an e-commerce website designed to provide users with a
-            simple and structured way to browse, select, and purchase footwear
-            online.
-          </p>
-          <p>
-            The focus of the project was to create a clean shopping experience
-            with clear navigation, product visibility, and an easy checkout flow.
-          </p>
+        <div className="case-block about-project-image">
+          <div className="about-project-image-container">
+            <img
+              src="/images/about-project.png"
+              alt="About Project - Shoes Hub E-Commerce Application"
+              className="about-project-img"
+            />
+          </div>
         </div>
 
         {/* PROBLEM */}
