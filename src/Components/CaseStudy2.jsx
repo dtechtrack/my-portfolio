@@ -63,53 +63,13 @@ const ShoesCaseStudy = () => {
       <section className="case-content">
         {/* ABOUT PROJECT */}
         <div className="case-block about-block">
-          <div className="about-grid">
-            <div className="about-left">
-              <h2 className="about-title">About Project...</h2>
-              <p className="about-desc">
-                This app is an online shoe shopping application that provides
-                users with a seamless experience for browsing, selecting, and
-                purchasing footwear from various brands and categories. The app
-                features a modern UI/UX design, secure payment options, and a
-                personalized shopping experience.
-              </p>
-
-              <h3 className="about-subtitle">Main Purpose</h3>
-              <div className="about-purpose" aria-label="Main purpose list">
-                <div className="purpose-pill">
-                  <span className="purpose-icon" aria-hidden="true" />
-                  <span>Convenience and Accessibility.</span>
-                </div>
-                <div className="purpose-pill">
-                  <span className="purpose-icon" aria-hidden="true" />
-                  <span>Wide Variety of Choices.</span>
-                </div>
-                <div className="purpose-pill">
-                  <span className="purpose-icon" aria-hidden="true" />
-                  <span>Simplified Shopping Experience.</span>
-                </div>
-                <div className="purpose-pill">
-                  <span className="purpose-icon" aria-hidden="true" />
-                  <span>Customer Engagement and Retention.</span>
-                </div>
-                <div className="purpose-pill">
-                  <span className="purpose-icon" aria-hidden="true" />
-                  <span>Transparent Order and Return Process.</span>
-                </div>
-                <div className="purpose-pill">
-                  <span className="purpose-icon" aria-hidden="true" />
-                  <span>Brand Visibility and Growth.</span>
-                </div>
-              </div>
-            </div>
-
             <div className="about-right" aria-hidden="true">
               <div className="about-visual">
-                <img src="/images/shoes.png" alt="" />
+                <img src="/images/about-project.png" alt="" />
               </div>
             </div>
           </div>
-        </div>
+        
 
         {/* PROBLEM */}
         <div className="case-block problem-block">
