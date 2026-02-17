@@ -389,6 +389,7 @@
   margin: 0;
   padding: 0;
   width: 100%;
+  display: block;
 }
 
 .about-project-image-container {
@@ -400,6 +401,10 @@
   box-shadow: var(--shadow-lg);
   background: var(--bg-tertiary);
   position: relative;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .about-project-img {
@@ -409,6 +414,7 @@
   object-fit: contain;
   object-position: center;
   max-width: 100%;
+  min-height: 200px;
 }
 
 @media (max-width: 768px) {

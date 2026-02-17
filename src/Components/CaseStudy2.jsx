@@ -68,6 +68,10 @@ const ShoesCaseStudy = () => {
               src="/images/about-project.png"
               alt="About Project - Shoes Hub E-Commerce Application"
               className="about-project-img"
+              onError={(e) => {
+                console.error('Image failed to load:', e.target.src);
+                e.target.style.display = 'none';
+              }}
             />
           </div>
         </div>
