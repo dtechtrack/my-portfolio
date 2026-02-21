@@ -63,12 +63,83 @@ const ShoesCaseStudy = () => {
       <section className="case-content">
         {/* ABOUT PROJECT */}
         <div className="case-block about-block">
-            <div className="about-right" aria-hidden="true">
-              <div className="about-visual">
-                <img src="/images/about-project.png" alt="" />
+          <h2>About Project</h2>
+
+          <div className="about-layout">
+
+            {/* LEFT — description fills the full column height */}
+            <div className="about-left">
+              <p className="about-desc">
+                This app is an online shoe shopping application that provides users
+                with a seamless experience for browsing, selecting, and purchasing
+                footwear from various brands and categories. The app features a
+                modern UI/UX design, secure payment options, and a personalized
+                shopping experience.
+              </p>
+            </div>
+
+            {/* RIGHT — animated vertical timeline */}
+            <div className="about-right">
+              <p className="about-purpose-label">Main Purpose</p>
+
+              <div className="about-timeline" aria-label="Main purposes of the project">
+                <div className="about-timeline-track" aria-hidden="true">
+                  <div className="about-timeline-progress"></div>
+                </div>
+
+                <div className="about-timeline-item about-tl--1">
+                  <div className="about-tl-dot" aria-hidden="true"></div>
+                  <div className="about-tl-content">
+                    <span className="about-tl-index" aria-hidden="true">01</span>
+                    <span className="about-tl-text">Convenience and Accessibility</span>
+                  </div>
+                </div>
+
+                <div className="about-timeline-item about-tl--2">
+                  <div className="about-tl-dot" aria-hidden="true"></div>
+                  <div className="about-tl-content">
+                    <span className="about-tl-index" aria-hidden="true">02</span>
+                    <span className="about-tl-text">Wide Variety of Choices</span>
+                  </div>
+                </div>
+
+                <div className="about-timeline-item about-tl--3">
+                  <div className="about-tl-dot" aria-hidden="true"></div>
+                  <div className="about-tl-content">
+                    <span className="about-tl-index" aria-hidden="true">03</span>
+                    <span className="about-tl-text">Simplified Shopping Experience</span>
+                  </div>
+                </div>
+
+                <div className="about-timeline-item about-tl--4">
+                  <div className="about-tl-dot" aria-hidden="true"></div>
+                  <div className="about-tl-content">
+                    <span className="about-tl-index" aria-hidden="true">04</span>
+                    <span className="about-tl-text">Customer Engagement and Retention</span>
+                  </div>
+                </div>
+
+                <div className="about-timeline-item about-tl--5">
+                  <div className="about-tl-dot" aria-hidden="true"></div>
+                  <div className="about-tl-content">
+                    <span className="about-tl-index" aria-hidden="true">05</span>
+                    <span className="about-tl-text">Transparent Order and Return Process</span>
+                  </div>
+                </div>
+
+                <div className="about-timeline-item about-tl--6">
+                  <div className="about-tl-dot" aria-hidden="true"></div>
+                  <div className="about-tl-content">
+                    <span className="about-tl-index" aria-hidden="true">06</span>
+                    <span className="about-tl-text">Brand Visibility and Growth</span>
+                  </div>
+                </div>
+
               </div>
             </div>
+
           </div>
+        </div>
         
 
         {/* PROBLEM */}
@@ -153,19 +224,95 @@ const ShoesCaseStudy = () => {
         </div>
 
         {/* SOLUTION */}
-        <div className="case-block">
+        <div className="case-block solution-block">
           <h2>Solution</h2>
-          <p>
-            The solution focuses on a clean and minimal interface that helps
-            users quickly find the right shoes and complete purchases with
-            minimal steps.
-          </p>
-          <ul>
-            <li>Simple category-based navigation</li>
-            <li>Clear product cards with essential details</li>
-            <li>Easy add-to-cart and checkout flow</li>
-            <li>Consistent layout across pages</li>
-          </ul>
+
+          <div className="solution-grid">
+
+            <div className="sol-card sol-card--1">
+              <div className="sol-card-inner">
+                <div className="sol-number" aria-hidden="true">01</div>
+                <div className="sol-body">
+                  <h3 className="sol-title">Size Guide and Customer Reviews</h3>
+                  <ul className="sol-list">
+                    <li>Provide a detailed size chart with comparisons for different brands.</li>
+                    <li>Allow users to view customer reviews and feedback on size accuracy and comfort.</li>
+                  </ul>
+                </div>
+              </div>
+              <div className="sol-card-glow" aria-hidden="true"></div>
+            </div>
+
+            <div className="sol-card sol-card--2">
+              <div className="sol-card-inner">
+                <div className="sol-number" aria-hidden="true">02</div>
+                <div className="sol-body">
+                  <h3 className="sol-title">Verified Seller and Product Authenticity</h3>
+                  <ul className="sol-list">
+                    <li>Work only with trusted brands and verified sellers to ensure quality.</li>
+                    <li>Include a brand authentication label or certificate in product details.</li>
+                  </ul>
+                </div>
+              </div>
+              <div className="sol-card-glow" aria-hidden="true"></div>
+            </div>
+
+            <div className="sol-card sol-card--3">
+              <div className="sol-card-inner">
+                <div className="sol-number" aria-hidden="true">03</div>
+                <div className="sol-body">
+                  <h3 className="sol-title">Simple and Clear Return Policy</h3>
+                  <ul className="sol-list">
+                    <li>Offer easy returns and exchanges with clear instructions on refund timelines.</li>
+                    <li>Provide a free return pickup service for a smooth experience.</li>
+                  </ul>
+                </div>
+              </div>
+              <div className="sol-card-glow" aria-hidden="true"></div>
+            </div>
+
+            <div className="sol-card sol-card--4">
+              <div className="sol-card-inner">
+                <div className="sol-number" aria-hidden="true">04</div>
+                <div className="sol-body">
+                  <h3 className="sol-title">Live Order Tracking and Delivery Notifications</h3>
+                  <ul className="sol-list">
+                    <li>Allow users to track their orders in real time through an integrated tracking system.</li>
+                    <li>Send SMS and app notifications for order confirmation, shipping, and delivery updates.</li>
+                  </ul>
+                </div>
+              </div>
+              <div className="sol-card-glow" aria-hidden="true"></div>
+            </div>
+
+            <div className="sol-card sol-card--5">
+              <div className="sol-card-inner">
+                <div className="sol-number" aria-hidden="true">05</div>
+                <div className="sol-body">
+                  <h3 className="sol-title">Advanced Filters and Sorting Options</h3>
+                  <ul className="sol-list">
+                    <li>Allow users to filter shoes by size, color, brand, price, material, and occasion.</li>
+                    <li>Add a "Best Sellers" and "New Arrivals" section for easy browsing.</li>
+                  </ul>
+                </div>
+              </div>
+              <div className="sol-card-glow" aria-hidden="true"></div>
+            </div>
+
+            <div className="sol-card sol-card--6">
+              <div className="sol-card-inner">
+                <div className="sol-number" aria-hidden="true">06</div>
+                <div className="sol-body">
+                  <h3 className="sol-title">24/7 Customer Support</h3>
+                  <ul className="sol-list">
+                    <li>Provide a dedicated helpline or chat support to assist users with their concerns.</li>
+                  </ul>
+                </div>
+              </div>
+              <div className="sol-card-glow" aria-hidden="true"></div>
+            </div>
+
+          </div>
         </div>
 
         {/* PROCESS */}

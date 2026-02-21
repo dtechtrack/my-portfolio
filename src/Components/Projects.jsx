@@ -38,16 +38,6 @@ const Projects = () => {
     },
     {
       id: 2,
-      title: "Smart RFID Shopping Trolley",
-      description: "A real-time IoT-based shopping system designed to eliminate checkout queues using RFID and embedded UI.",
-      image: "/images/hero.jpeg",
-      link: "/case-study/smart-rfid-trolley",
-      external: false,
-      category: "IoT Design",
-      color: "teal"
-    },
-    {
-      id: 3,
       title: "Shoes Hub",
       description: "An e-commerce website focused on clean navigation, product discovery, and a smooth checkout experience.",
       image: "/images/shoes.png",
@@ -55,6 +45,16 @@ const Projects = () => {
       external: false,
       category: "E-Commerce",
       color: "coral"
+    },
+    {
+      id: 3,
+      title: "Smart RFID Shopping Trolley",
+      description: "A real-time IoT-based shopping system designed to eliminate checkout queues using RFID and embedded UI.",
+      image: "/images/hero.jpeg",
+      link: "/case-study/smart-rfid-trolley",
+      external: false,
+      category: "IoT Design",
+      color: "teal"
     }
   ];
 
