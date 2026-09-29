@@ -66,8 +66,6 @@ const Home = () => {
 
           <div className="hero-role">
             <span className="role-tag">UI/UX Designer</span>
-            <span className="role-separator">•</span>
-            <span className="role-tag">Frontend Developer</span>
           </div>
 
           <div className="hero-cta">

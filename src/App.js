@@ -10,6 +10,8 @@ import Achievements from "./Components/Achievements";
 import Contact from "./Components/Contact";
 import CaseStudy1 from "./Components/CaseStudy1";
 import CaseStudy2 from "./Components/CaseStudy2";
+import CaseStudy3 from "./Components/CaseStudy3";
+import CaseStudy4 from "./Components/CaseStudy4";
 import ScrollToTop from "./Components/ScrollToTop";
 import CaseStudyLayout from "./Components/CaseStudyLayout";
 
@@ -54,7 +56,7 @@ function App() {
   {/* Case Studies Layout */}
   <Route element={<CaseStudyLayout />}>
     <Route
-      path="/case-study/smart-rfid-trolley"
+      path="/case-study/adaa-jaipur"
       element={<CaseStudy1 />}
     />
     <Route
@@ -62,11 +64,21 @@ function App() {
       element={<CaseStudy2 />}
     />
   </Route>
+  <Route
+    path="/case-study/corporate-gear"
+    element={<CaseStudy3 />}
+  />
+  <Route
+    path="/case-study/ppl-promotion"
+    element={<CaseStudy4 />}
+  />
 </Routes>
-
+ 
       </BrowserRouter>
     </ThemeProvider>
   );
 }
 
 export default App;
+
+

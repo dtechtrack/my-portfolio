@@ -48,12 +48,32 @@ const Projects = () => {
     },
     {
       id: 3,
-      title: "Smart RFID Shopping Trolley",
-      description: "A real-time IoT-based shopping system designed to eliminate checkout queues using RFID and embedded UI.",
-      image: "/images/hero.jpeg",
-      link: "/case-study/smart-rfid-trolley",
+      title: "Corporate Gear",
+      description: "Corporate Gear is a U.S.-based promotional products/e-commerce company under ParsonsKellogg, focused on premium branded apparel, accessories, corporate gifts, and custom merchandise.",
+      image: "/images/hero.png",
+      link: "/case-study/corporate-gear",
       external: false,
-      category: "IoT Design",
+      category: "B2B Ecommerce",
+      color: "teal"
+    },
+    {
+      id: 4,
+      title: "PPL Promotion",
+      description: "PPL promotion most commonly refers to Pay-Per-Lead (PPL) advertising, a performance-based marketing model used by a specialized corporate merchandise and branding company",
+      image: "/images/ppl.png",
+      link: "/case-study/ppl-promotion",
+      external: false,
+      category: "B2B Ecommerce",
+      color: "teal"
+    },
+    {
+      id: 5,
+      title: "SILVORA",
+      description: "A premium jewellery website designed with an aesthetic-first approach, focusing on elegant visual storytelling and refined product presentation.",
+      image: "/images/silvora.png",
+      link: "/case-study/silvora",
+      external: false,
+      category: "B2B Ecommerce",
       color: "teal"
     }
   ];
